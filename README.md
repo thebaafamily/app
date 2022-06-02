@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# A simple React App to help a family with the list of Todos.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
