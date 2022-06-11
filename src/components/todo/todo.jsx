@@ -19,7 +19,7 @@ function Header(props)
                     <span className="headerSide">
                     </span>
                     <span className="headerTitle">
-                        <h1>the baa family </h1>  <h3>todo</h3>
+                        <h1>the baa family </h1>
                     </span>
                     <span className="headerSide">
                         <img className="headerSettingImage" src="/settings.png" alt="Settings" onClick={handleSettingsClick}></img>

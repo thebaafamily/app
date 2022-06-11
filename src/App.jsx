@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import {Header, Users, Tasks, Footer } from './components/todo/todo'
 import {Settings} from './components/todo/settings/settingsmain'
 import {Popup} from './components/todo/popup'
+import {Countdown} from './components/countdown/countdown'
 
 function App() {
   const [user, setUser] = useState(0)
@@ -28,6 +29,7 @@ function App() {
       <div className="App">
         <header className="App-header"> </header>
         <Header value={user} onSettingsClicked={toggleSettings}/>
+        <Countdown />
         {/* <div className='App'> */}
           {showSettings ?
                 <>
