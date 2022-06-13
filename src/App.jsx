@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
-import {Header, Users, Tasks, Footer } from './components/todo/todo'
+import {Header, Footer} from './components/app/app'
+import {Users, Tasks} from './components/todo/todo'
 import {Settings} from './components/todo/settings/settingsmain'
 import {Popup} from './components/todo/popup'
 import {Countdown} from './components/countdown/countdown'
