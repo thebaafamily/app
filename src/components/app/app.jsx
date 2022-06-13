@@ -1,6 +1,3 @@
-
-
-
 import './css/app.css';
 import React, {useState, useEffect} from "react";
 
@@ -13,17 +10,22 @@ function Header(props)
     {
         props.onSettingsClicked()
     }
+    const handleKidZoneClick = () =>
+    {
+        props.onKidZoneClicked()
+    }
     return (
         <>
             <div className="headerContainer">
                 <div className="header">
                     <span className="headerSide">
+                        {/* <img className="headerSettingImage" src="/settings.png" alt="Settings" onClick={handleSettingsClick}></img> */}
                     </span>
                     <span className="headerTitle">
-                        <h1>the baa family </h1>
+                        <h1>the baa family</h1>
                     </span>
                     <span className="headerSide">
-                        <img className="headerSettingImage" src="/settings.png" alt="Settings" onClick={handleSettingsClick}></img>
+                        <img className="headerSettingImage" src="/tbf-math.png" alt="Kid Zone" onClick={handleKidZoneClick}></img>
                     </span>
                 </div>
             </div>

@@ -1,7 +1,60 @@
 import './css/todo.css';
 import React, {useState, useEffect} from "react";
+import {Settings} from './settings/settingsmain'
+import {Popup} from './popup'
 // import Select from 'react-select';
 
+function Todo(props)
+{
+    const [user, setUser] = useState(0)
+    const [showSettings, setShowSettings] = useState(false)
+    const [showTaskAssigned, setShowTaskAssigned] = useState(false)
+
+    function handleUserChange(currentUser){
+        setUser(currentUser)
+    }
+    const handleSettingsClick = () => 
+    {
+        setShowSettings(!showSettings)
+    }
+    
+    function toggleTaskAssigned(){
+        setShowTaskAssigned(!showTaskAssigned)
+    }
+
+    return(
+        <>
+            <div className='tasksContainer'>
+                <div className="tasksheader">
+                    <span className="tasksSide"> </span>
+            
+                    <div className='tasksLabel'> tasks </div>
+
+                    <span className="tasksSide">
+                        <img className="tasksSettingImage" src="/settings.png" alt="Kid Zone" onClick={handleSettingsClick}></img>
+                    </span>
+                </div>
+                {showSettings ?
+                    <>
+                        <Settings init={true} onSubmitTaskAssignment={toggleTaskAssigned}/>
+                            {showTaskAssigned && <Popup
+                                          content={<>
+                                                    <p>Task Assigned</p>
+                                                  </>}
+                                          handleClose={toggleTaskAssigned}
+                                        />
+                            }
+                    </>
+                :
+                    <>
+                        <Users value={user} onUserChange={handleUserChange}/> 
+                        <Tasks value={user}/>
+                    </>
+                }
+            </div>
+      </>
+    )
+}
 
 function Users(props)
 {
@@ -80,7 +133,7 @@ function Tasks(props)
 
     return (
         <>
-            <div className='tasksContainer'>
+            {/* <div className='tasksContainer'> */}
                 {/* {console.log(UserTasks)} */}
                 {
                 UserTasks.map( (task, i) => 
@@ -121,10 +174,10 @@ function Tasks(props)
                                 }
                               )
                     }
-            </div>
+            {/* </div> */}
         </>
     )
 }
 
 
-export {Users, Tasks}
+export {Todo, Users, Tasks}
