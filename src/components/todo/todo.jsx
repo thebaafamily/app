@@ -31,7 +31,7 @@ function Todo(props)
                     <div className='tasksLabel'> tasks </div>
 
                     <span className="tasksSide">
-                        <img className="tasksSettingImage" src="/settings.png" alt="Kid Zone" onClick={handleSettingsClick}></img>
+                        <img className="tasksSettingImage" src="/tbf-todo-settings.png" alt="Kid Zone" onClick={handleSettingsClick}></img>
                     </span>
                 </div>
                 {showSettings ?

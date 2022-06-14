@@ -1,18 +1,14 @@
 import './css/app.css';
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 
 function Header(props)
 {
     useEffect(() => {
-    })
+    }, [props])
 
-    const handleSettingsClick = () => 
+    const handleMathZoneClick = () =>
     {
-        props.onSettingsClicked()
-    }
-    const handleKidZoneClick = () =>
-    {
-        props.onKidZoneClicked()
+        props.onMathZoneClicked()
     }
     return (
         <>
@@ -25,7 +21,7 @@ function Header(props)
                         <h1>the baa family</h1>
                     </span>
                     <span className="headerSide">
-                        <img className="headerSettingImage" src="/tbf-math.png" alt="Kid Zone" onClick={handleKidZoneClick}></img>
+                        <img className="headerSettingImage" src={props.image} alt="Kid Zone" onClick={handleMathZoneClick}></img>
                     </span>
                 </div>
             </div>

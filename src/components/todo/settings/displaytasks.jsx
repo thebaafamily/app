@@ -1,7 +1,7 @@
 import '../css/todo.css';
 import React, {useState, useEffect} from "react";
 import Table from 'react-bootstrap/Table';
-import * as Icon from 'react-bootstrap-icons';
+// import * as Icon from 'react-bootstrap-icons';
 
 function DisplayTasks (props) 
 {

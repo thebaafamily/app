@@ -1,9 +1,9 @@
 import './css/todo.css';
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 
 
 function Popup(props){
-    useEffect(() => {})
+    useEffect(() => {}, [props])
 
     return (
       <div className="popup-box">
