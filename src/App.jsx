@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState} from "react";
-import {Header, Footer} from './components/app/app'
+import {Header, Footer} from './components/facade/facade'
 import {Countdown} from './components/countdown/countdown'
 import {Todo} from './components/todo/todo'
 import {Math} from './components/math/math'
