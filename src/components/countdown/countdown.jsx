@@ -6,7 +6,7 @@ function Countdown(props)
 {
     const [countdown, setCountdown] = useState([])
     useEffect(() => {
-        fetch("http://192.168.1.181:3002/countdown")
+        fetch("http://localhost:3002/countdown")
         .then(res => res.json()).then (res => 
         {
             // console.log(res["data"]); 

@@ -16,7 +16,7 @@ function SettingsAssignTasks(props)
 
     useEffect(() => {
         // https://remotestack.io/react-js-get-data-with-fetch-api-and-rest-api-tutorial/
-        fetch("http://192.168.1.181:3001/users/all")
+        fetch("http://localhost:3001/users/all")
             .then(res => res.json()).then (res => 
                 {
                     var userMap = []
@@ -24,7 +24,7 @@ function SettingsAssignTasks(props)
                     setUserList(userMap)
                 })
                 
-        fetch("http://192.168.1.181:3001/tasks/all")
+        fetch("http://localhost:3001/tasks/all")
             .then(res => res.json()).then (res => 
                 {
                     var taskMap = []
@@ -33,7 +33,7 @@ function SettingsAssignTasks(props)
                     setTaskList(taskMap)
                 })
 
-        fetch("http://192.168.1.181:3001/calendar/all")
+        fetch("http://localhost:3001/calendar/all")
             .then(res => res.json()).then (res => 
                {
                     var calendarMap = []
@@ -79,7 +79,7 @@ function SettingsAssignTasks(props)
         var taskcalendarList = []
         taskCalendar.map((row) => taskcalendarList.push(row["value"]))
         // console.log(taskcalendarList)
-        fetch("http://192.168.1.181:3001/task/assign/", 
+        fetch("http://localhost:3001/task/assign/", 
         {
             method: "POST",
             headers: {"Accept": "application/json",

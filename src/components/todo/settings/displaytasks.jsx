@@ -7,7 +7,7 @@ function DisplayTasks (props)
 {
     const[metadata, setMetadata] = useState([])
     useEffect(() => {
-        fetch("http://192.168.1.181:3001/todo/metadata")
+        fetch("http://localhost:3001/todo/metadata")
             .then(res => res.json()).then (res => 
                 { setMetadata(res["data"])
                 })

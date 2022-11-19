@@ -2,6 +2,7 @@ import './css/todo.css';
 import React, {useState, useEffect} from "react";
 import {Settings} from './settings/settingsmain'
 import {Popup} from './popup'
+// require('dotenv').config()
 // import Select from 'react-select';
 
 function Todo(props)
@@ -60,8 +61,9 @@ function Users(props)
 {
     const [Users, setUsers] = useState([])
     useEffect(() => {
+        // console.log(process.env.REACT_APP_TODO_API_URL)
         // https://remotestack.io/react-js-get-data-with-fetch-api-and-rest-api-tutorial/
-        fetch("http://192.168.1.181:3001/users")
+        fetch("http://localhost:3001/users")
             .then(res => res.json()).then (res => 
                 {
                     // console.log(res["data"]); 
@@ -98,7 +100,7 @@ function Tasks(props)
     const [UserTasks, setTasks] = useState([])
 
     useEffect(() => {
-        fetch("http://192.168.1.181:3001/tasks/userid/" + props.value)
+        fetch("http://localhost:3001/tasks/userid/" + props.value)
             .then(res => res.json()).then (res => 
                 {
                     // console.log("raw res", res)
@@ -117,7 +119,7 @@ function Tasks(props)
         }
         try 
         {
-            await fetch("http://192.168.1.181:3001/tasks/" + url + "/" + task.uid, 
+            await fetch("http://localhost:3001/tasks/" + url + "/" + task.uid, 
                         {
                             method: "PUT",
                             headers: {"Content-Type": "application/json"},

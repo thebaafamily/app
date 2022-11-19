@@ -8,9 +8,9 @@
     /* margin-right: 65%; */
     margin-left: 5%;
     /* height:300px; */
-    background-color:#511d0f;
+    background-color:#621bb0;
     color: aliceblue;
-    /* position:absolute; */
+    position:absolute;
     /* top:50%; */
     /* left:50%; */
     /* transform:translate(-50%,-50%); */
@@ -20,24 +20,93 @@
   
     padding-top: 10px;
     padding-bottom: 10px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
+.mathPane {
+    height: auto;
+    width: 90%;
+    float: inline-start;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #c5c73f45;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.mathSidePane {
+    height: 110px;
+    width: 8%;
+    position: relative;
+    margin: 10px 0px 10px 10px;
+    padding-top: 30px;
+    float: inline-start;    
+    font-size: xx-large;
+    font-stretch: expanded;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.mathLeftPane {
+    background-color: #1bb054;
+    color: darkblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.mathCenterPane {
+    height: 110px;
+    width: 80%;
+    position: relative;
+    top: -50%;
+    float: inline-start;
+    margin: 10px 0px 10px 10px;
+    background-color: #1b4db0;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.mathRightPane {
+    background-color: #1ba6b0;
+    color: rgb(139, 39, 0);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.mathResults {
+    font-size: 55px;
+    color: rgb(201, 207, 38);
+    margin: 10px 10px 5px 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.mathRestartGame {
+    height: 60px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    /* margin-top: 10px; */
+}
 
 .lbl {
     height: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* color: crimson; */
     font-size: xx-large;
-    margin: 0px 5px 0px 5px;
+    margin: 10px 5px 0px 5px;
 }
 
-.addNumber1 {
-    /* height: 100px; */
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+.mathNumber1 {
     color: crimson;
 }
 
-.addNumber2 {
+.mathNumber2 {
     /* height: 100px; */
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     color: rgb(217, 220, 20);
@@ -51,9 +120,29 @@
     color: rgb(16, 106, 166);
 }
 
+
+.txtBox {
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #c5c73f;
+    font-style: italic;
+    width: 100px;
+    height: auto;
+    padding: 5px 10px 5px 10px;
+    font-size: xx-large;
+    color: brown;
+    margin: 10px 5px 0px 5px;
+    align-items: center;
+    text-align: center;
+
+}
+
+/* 
 .addResult {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 90px;
+    font-size: 70px;
     font-style: italic;
     font-stretch: extra-expanded;
     margin: 0px, 0px 10px 0px;
@@ -68,34 +157,16 @@
     color:rgb(222, 203, 35)
 }
 
-.txtBox {
+.btnAdd {
+    border-radius: 15px;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    background-color: #c5c73f;
-    font-style: italic;
-    width: 100px;
-    height: auto;
-    padding: 5px 10px 5px 10px;
-    font-size: xx-large;
-    color: brown;
-    margin: 0px 5px 0px 5px;
-    align-items: center;
-    text-align: center;
-
-}
-
-.btnAdd {
-    border-radius: 15px;
-    /* border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px; */
-    margin: 0px 5px 0px 5px;
+    margin: 0px 5px 10px 5px;
     font-size: x-large;
     background-color: aqua;
     color: darkblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-}
+} */
